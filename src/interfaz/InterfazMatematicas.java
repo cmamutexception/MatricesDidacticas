@@ -1,6 +1,7 @@
 package interfaz;
 
 import java.awt.BorderLayout;
+import java.io.BufferedWriter;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -60,6 +61,7 @@ public class InterfazMatematicas extends JFrame{
 	}
 	
 	public void cambiarColor() {
+		
 	}
 	
 	public void refrescarMatriz(){
@@ -74,7 +76,9 @@ public class InterfazMatematicas extends JFrame{
 	public void cargar(){
 	}
 	
-	public void guardar(){
+	public void guardar() {
+		
+		
 	}
 	
 	public static void main(String[] args){
