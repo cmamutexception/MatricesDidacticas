@@ -13,6 +13,7 @@ import javax.swing.border.TitledBorder;
 
 @SuppressWarnings("serial")
 public class PanelInformacion extends JPanel implements ActionListener{
+	
 	private JLabel labFilas;
 	private JLabel labCols;
 	private JLabel labResultado;
@@ -80,5 +81,10 @@ public class PanelInformacion extends JPanel implements ActionListener{
 		if(comando.equals(GENERAR_MATRIZ)){
 			principal.generarMatriz();			
 		}
+		
+		if(comando.equals(GUARDAR)){
+			  principal.cargar();
+			}
+
 	}
 }
