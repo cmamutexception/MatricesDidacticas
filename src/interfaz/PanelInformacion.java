@@ -19,6 +19,7 @@ public class PanelInformacion extends JPanel implements ActionListener{
 	private JTextField txtFilas;
 	private JTextField txtCols;
 	private JButton butGenerarMatriz;
+	private JButton butGuardar;
 	
 	private JTextField txtResultado;
 	
@@ -41,7 +42,11 @@ public class PanelInformacion extends JPanel implements ActionListener{
 		txtFilas = new JTextField(2);
 		txtCols  = new JTextField(2);
 		butGenerarMatriz = new JButton("Generar Matriz");
-		
+		butGuardar = new JButton("Guardar");
+		butGuardar.addActionListener(this);
+		butGuardar.setActionCommand(GUARDAR);
+		add(butGuardar);
+
 		txtResultado = new JTextField(4);
 		txtResultado.setEditable(false);
 		
