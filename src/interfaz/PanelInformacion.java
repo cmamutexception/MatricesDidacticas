@@ -13,12 +13,14 @@ import javax.swing.border.TitledBorder;
 
 @SuppressWarnings("serial")
 public class PanelInformacion extends JPanel implements ActionListener{
+	
 	private JLabel labFilas;
 	private JLabel labCols;
 	private JLabel labResultado;
 	private JTextField txtFilas;
 	private JTextField txtCols;
 	private JButton butGenerarMatriz;
+	private JButton butGuardar;
 	
 	private JTextField txtResultado;
 	
@@ -41,7 +43,11 @@ public class PanelInformacion extends JPanel implements ActionListener{
 		txtFilas = new JTextField(2);
 		txtCols  = new JTextField(2);
 		butGenerarMatriz = new JButton("Generar Matriz");
-		
+		butGuardar = new JButton("Guardar");
+		butGuardar.addActionListener(this);
+		butGuardar.setActionCommand(GUARDAR);
+		add(butGuardar);
+
 		txtResultado = new JTextField(4);
 		txtResultado.setEditable(false);
 		
@@ -80,5 +86,10 @@ public class PanelInformacion extends JPanel implements ActionListener{
 		if(comando.equals(GENERAR_MATRIZ)){
 			principal.generarMatriz();			
 		}
+		
+		if(comando.equals(GUARDAR)){
+			  principal.cargar();
+			}
+
 	}
 }
